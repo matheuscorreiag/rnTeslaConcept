@@ -6,14 +6,15 @@ import { View, Text } from "react-native";
 interface Props {
   type: string;
   active: boolean;
+  size: number;
 }
 
 import { Button } from "./styles";
 
-const ConfigButton: React.FC<Props> = ({ type, active }) => {
+const ConfigButton: React.FC<Props> = ({ type, active, size }) => {
   const iconActive = active ? "#fff" : "#7F8489";
   return (
-    <Button active={active}>
+    <Button active={active} size={size}>
       {type === "settings" && (
         <Icon name="settings" size={16} color="#7F8489" />
       )}
@@ -27,8 +28,8 @@ const ConfigButton: React.FC<Props> = ({ type, active }) => {
         <Icon name="codesandbox" size={16} color={iconActive} />
       )}
       {type === "wind" && <Icon name="wind" size={16} color={iconActive} />}
-      {type === "lock" && <Icon name="lock" size={16} color={iconActive} />}
-      {type === "unlock" && <Icon name="unlock" size={16} color={iconActive} />}
+      {type === "lock" && <Icon name="lock" size={24} color={iconActive} />}
+      {type === "unlock" && <Icon name="unlock" size={24} color={iconActive} />}
     </Button>
   );
 };

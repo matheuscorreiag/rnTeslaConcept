@@ -11,7 +11,9 @@ export const SpeedCounter = styled.Text`
   color: #fff;
   font-weight: 200;
   padding-right: -50px;
+  font-family: Roboto_100Thin !important;
 `;
 export const Kilometers = styled.Text`
   color: #fff;
+  font-family: Roboto_300Light;
 `;
