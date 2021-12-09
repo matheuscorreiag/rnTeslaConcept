@@ -1,10 +1,16 @@
 import styled from "styled-components/native";
 import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
-export const Container = styled.View`
+
+export const Scroll = styled.ScrollView`
   background-color: #353a40;
   width: ${width};
   height: ${height};
+`;
+export const Container = styled.View`
+  width: ${width};
+  height: ${height * 0.95};
+  overflow: scroll;
 `;
 export const ButtonContainer = styled.View`
   display: flex;

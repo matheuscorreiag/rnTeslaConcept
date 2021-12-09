@@ -19,7 +19,7 @@ export default function App() {
   } else {
     return (
       <View>
-        <StatusBar hidden />
+        <StatusBar backgroundColor={"#353a40"} />
         <Home />
       </View>
     );

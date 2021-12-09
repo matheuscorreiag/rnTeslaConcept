@@ -5,12 +5,11 @@ export const Container = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 `;
 
 export const Car = styled.Image`
-  width: 900px;
-  margin-left: 600px;
-  height: 300px;
-  padding-bottom: 200px;
+  position: absolute;
+  width: 700px;
+  right: -350px;
+  top: -120px;
 `;

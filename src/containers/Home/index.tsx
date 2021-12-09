@@ -1,35 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import ACLabel from "../../components/ACLabel";
-import Buttons from "../../components/Buttons";
-
-import ConfigButton from "../../components/Buttons";
+import LiveButtons from "../../components/LiveButtons";
+import OpenCarTitle from "../../components/OpenCarTitle";
 import Sidecar from "../../components/Sidecar";
 import Speed from "../../components/Speed";
+import StaticButtons from "../../components/StaticButtons";
 import Title from "../../components/Title";
-import { ButtonContainer, Container, TitleContainer } from "./styles";
+import { ButtonContainer, Container, Scroll, TitleContainer } from "./styles";
 
 const Home = () => {
+  const [active, setActive] = useState(false);
   return (
-    <Container>
-      <ButtonContainer>
-        <Buttons active={false} type="settings" size={54} />
-      </ButtonContainer>
-      <TitleContainer>
-        <Title />
-      </TitleContainer>
-      <TitleContainer>
-        <Speed />
-      </TitleContainer>
-      <TitleContainer>
+    <Scroll>
+      <Container>
+        <ButtonContainer>
+          <StaticButtons type="settings" />
+        </ButtonContainer>
+        <TitleContainer>
+          <Title />
+        </TitleContainer>
+        <TitleContainer>
+          <Speed />
+        </TitleContainer>
         <Sidecar />
-      </TitleContainer>
-      <TitleContainer style={{ backgroundColor: "red" }}>
-        <ACLabel active={true} />
-      </TitleContainer>
-      <TitleContainer style={{ backgroundColor: "red" }}>
-        <Buttons active={true} type="lock" size={128} />
-      </TitleContainer>
-    </Container>
+        <TitleContainer>
+          <ACLabel active={active} />
+        </TitleContainer>
+        <TitleContainer>
+          <LiveButtons active={active} type="lock" size={110} />
+        </TitleContainer>
+        <TitleContainer>
+          <OpenCarTitle />
+        </TitleContainer>
+      </Container>
+    </Scroll>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text } from "./styles";
+import { Container, Text } from "./styles";
 
 interface Props {
   active: boolean;
@@ -8,9 +8,15 @@ interface Props {
 
 const ACLabel: React.FC<Props> = ({ active }) => {
   return (
-    <Text>
-      {active ? <Text>A/C is turned on</Text> : <Text>A/C is turned off</Text>}
-    </Text>
+    <Container>
+      <Text>
+        {active ? (
+          <Text>A/C is turned on</Text>
+        ) : (
+          <Text>A/C is turned off</Text>
+        )}
+      </Text>
+    </Container>
   );
 };
 

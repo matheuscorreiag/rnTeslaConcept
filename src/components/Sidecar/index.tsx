@@ -7,7 +7,7 @@ import myImage from "../../../assets/sidecar.png";
 const Sidecar = () => {
   return (
     <Container>
-      <Car source={myImage} />
+      <Car source={myImage} resizeMode="contain" />
     </Container>
   );
 };
