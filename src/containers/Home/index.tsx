@@ -6,13 +6,16 @@ import Sidecar from "../../components/Sidecar";
 import Speed from "../../components/Speed";
 import StaticButtons from "../../components/StaticButtons";
 import Title from "../../components/Title";
+import { View, Text } from "react-native";
+
 import { ButtonContainer, Container, Scroll, TitleContainer } from "./styles";
 
 const Home = () => {
   const [active, setActive] = useState(false);
+
   return (
-    <Scroll>
-      <Container>
+    <Container>
+      <Scroll>
         <ButtonContainer>
           <StaticButtons type="settings" />
         </ButtonContainer>
@@ -32,8 +35,8 @@ const Home = () => {
         <TitleContainer>
           <OpenCarTitle />
         </TitleContainer>
-      </Container>
-    </Scroll>
+      </Scroll>
+    </Container>
   );
 };
 

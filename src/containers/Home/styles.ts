@@ -4,13 +4,11 @@ const { width, height } = Dimensions.get("window");
 
 export const Scroll = styled.ScrollView`
   background-color: #353a40;
-  width: ${width};
-  height: ${height};
+  flex-grow: 1;
 `;
 export const Container = styled.View`
   width: ${width};
-  height: ${height * 0.95};
-  overflow: scroll;
+  height: ${height};
 `;
 export const ButtonContainer = styled.View`
   display: flex;
