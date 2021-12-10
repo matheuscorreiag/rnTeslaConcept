@@ -8,35 +8,42 @@ import StaticButtons from "../../components/StaticButtons";
 import Title from "../../components/Title";
 import { View, Text } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
 import { ButtonContainer, Container, Scroll, TitleContainer } from "./styles";
+import GestureRecognizer from "react-native-swipe-gestures";
 
 const Home = () => {
-  const [active, setActive] = useState(false);
-
+  const navigation = useNavigation();
   return (
-    <Container>
-      <Scroll>
-        <ButtonContainer>
-          <StaticButtons type="settings" />
-        </ButtonContainer>
-        <TitleContainer>
-          <Title />
-        </TitleContainer>
-        <TitleContainer>
-          <Speed />
-        </TitleContainer>
-        <Sidecar />
-        <TitleContainer>
-          <ACLabel active={active} />
-        </TitleContainer>
-        <TitleContainer>
-          <LiveButtons active={active} type="lock" size={110} />
-        </TitleContainer>
-        <TitleContainer>
-          <OpenCarTitle />
-        </TitleContainer>
-      </Scroll>
-    </Container>
+    <GestureRecognizer
+      onSwipeLeft={() => {
+        navigation.navigate("Status");
+      }}
+    >
+      <Container>
+        <Scroll>
+          <ButtonContainer>
+            <StaticButtons type="settings" screenName="Status" />
+          </ButtonContainer>
+          <TitleContainer>
+            <Title />
+          </TitleContainer>
+          <TitleContainer>
+            <Speed />
+          </TitleContainer>
+          <Sidecar />
+          <TitleContainer>
+            <ACLabel />
+          </TitleContainer>
+          <TitleContainer>
+            <LiveButtons type="lock" size={110} />
+          </TitleContainer>
+          <TitleContainer>
+            <OpenCarTitle />
+          </TitleContainer>
+        </Scroll>
+      </Container>
+    </GestureRecognizer>
   );
 };
 

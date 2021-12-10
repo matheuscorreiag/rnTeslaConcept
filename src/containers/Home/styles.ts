@@ -4,6 +4,7 @@ const { width, height } = Dimensions.get("window");
 
 export const Scroll = styled.ScrollView`
   background-color: #353a40;
+  height: 100%;
   flex-grow: 1;
 `;
 export const Container = styled.View`

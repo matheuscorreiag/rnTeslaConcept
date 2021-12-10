@@ -6,15 +6,14 @@ import { View, Text } from "react-native";
 
 interface Props {
   type: string;
-  active: boolean;
   size: number;
 }
 
 import { Button } from "./styles";
 
-const LiveButtons: React.FC<Props> = ({ type, active, size }) => {
-  const iconActive = active ? "#fff" : "#7F8489";
+const LiveButtons: React.FC<Props> = ({ type, size }) => {
   const [pressed, setOnPressed] = useState(false);
+  const iconActive = pressed ? "#fff" : "#7F8489";
   return (
     <TouchableOpacity
       onPress={() => {
