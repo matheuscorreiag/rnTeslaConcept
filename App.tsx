@@ -10,6 +10,8 @@ import {
 } from "@expo-google-fonts/roboto";
 import Routes from "./src/routes";
 import Status from "./src/containers/Status";
+import { SafeAreaView } from "react-native-safe-area-context";
+import global from "./src/global";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -20,6 +22,10 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
-    return <Routes />;
+    return (
+      <SafeAreaView style={global.droidSafeArea}>
+        <Routes />
+      </SafeAreaView>
+    );
   }
 }
