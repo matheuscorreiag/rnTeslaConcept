@@ -11,7 +11,6 @@ const Status = () => {
   return (
     <GestureRecognizer
       onSwipeRight={() => {
-        console.log("Swiped");
         navigation.navigate("Home");
       }}
     >

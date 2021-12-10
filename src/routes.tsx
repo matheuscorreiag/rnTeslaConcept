@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Icon from "react-native-vector-icons/Feather";
 import Home from "./containers/Home";
 import Status from "./containers/Status";
 import GestureRecognizer from "react-native-swipe-gestures";
@@ -10,13 +11,29 @@ const Routes = () => {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="Home">
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: { backgroundColor: "#353a40", height: 65 },
+        }}
+        initialRouteName="Home"
+      >
         <Tab.Screen
           name="Home"
           component={Home}
-          options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="home" size={24} color="#7159c1" />,
+          }}
         />
-        <Tab.Screen name="Status" component={Status} />
+        <Tab.Screen
+          name="Status"
+          component={Status}
+          options={{
+            tabBarIcon: () => (
+              <Icon name="activity" size={24} color="#7159c1" />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
