@@ -8,7 +8,8 @@ import {
   Label,
   Value,
   IconLabelContainer,
-  IconLabelValueContainer,
+  IconContainer,
+  LabelValueContainer,
 } from "./styles";
 
 const CarStatus = () => {
@@ -16,27 +17,54 @@ const CarStatus = () => {
     <Container>
       <Title>Status</Title>
       <StatsContainer>
-        <IconLabelValueContainer>
+        <IconLabelContainer>
+          <IconContainer>
+            <Icon name="battery" size={18} color="#fff" />
+          </IconContainer>
+          <LabelValueContainer>
+            <Label>Battery</Label>
+            <Value>54%</Value>
+          </LabelValueContainer>
+        </IconLabelContainer>
+        <IconLabelContainer>
+          <IconContainer>
+            <Icon name="navigation" size={18} color="#fff" />
+          </IconContainer>
+          <LabelValueContainer>
+            <Label>Range</Label>
+            <Value>297km</Value>
+          </LabelValueContainer>
+        </IconLabelContainer>
+        <IconLabelContainer>
+          <IconContainer>
+            <Icon name="thermometer" size={18} color="#fff" />
+          </IconContainer>
+          <LabelValueContainer>
+            <Label>Temperature</Label>
+            <Value>27 °C</Value>
+          </LabelValueContainer>
+        </IconLabelContainer>
+        {/* <IconLabelValueContainer>
           <IconLabelContainer>
-            <Icon name="battery" size={14} color="#fff" />
+            <Icon name="battery" size={12} color="#fff" />
             <Label> Battery</Label>
           </IconLabelContainer>
           <Value> 54%</Value>
-        </IconLabelValueContainer>
-        <IconLabelValueContainer>
+        </IconLabelValueContainer> */}
+        {/* <IconLabelValueContainer>
           <IconLabelContainer>
-            <Icon name="navigation" size={14} color="#fff" />
-            <Label> Range</Label>
+            <Icon name="navigation" size={12} color="#fff" />
           </IconLabelContainer>
+          <Label> Range</Label>
           <Value> 297 km</Value>
         </IconLabelValueContainer>
         <IconLabelValueContainer>
           <IconLabelContainer>
-            <Icon name="thermometer" size={14} color="#fff" />
+            <Icon name="thermometer" size={12} color="#fff" />
             <Label> Temperature</Label>
           </IconLabelContainer>
           <Value> 27 °C</Value>
-        </IconLabelValueContainer>
+        </IconLabelValueContainer> */}
       </StatsContainer>
     </Container>
   );

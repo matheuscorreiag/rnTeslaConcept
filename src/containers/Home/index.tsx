@@ -11,19 +11,20 @@ import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ButtonContainer, Container, Scroll, TitleContainer } from "./styles";
 import GestureRecognizer from "react-native-swipe-gestures";
+import { BorderContainer } from "../../common";
 
 const Home = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <GestureRecognizer
-    // onSwipeLeft={() => {
-    //   navigation.navigate("Status");
-    // }}
+      onSwipeLeft={() => {
+        navigation.navigate("Status");
+      }}
     >
-      <Container>
+      <BorderContainer>
         <Scroll>
           <ButtonContainer>
-            <StaticButtons type="settings" screenName="Status" />
+            <StaticButtons type="settings" />
           </ButtonContainer>
           <TitleContainer>
             <Title />
@@ -42,7 +43,7 @@ const Home = () => {
             <OpenCarTitle />
           </TitleContainer>
         </Scroll>
-      </Container>
+      </BorderContainer>
     </GestureRecognizer>
   );
 };

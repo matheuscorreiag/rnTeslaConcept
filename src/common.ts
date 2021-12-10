@@ -11,14 +11,3 @@ export const BorderContainer = styled.View`
   justify-content: center;
   padding: 20px 0;
 `;
-
-export const Scroll = styled.ScrollView`
-  flex-grow: 1;
-  width: ${width * 0.9};
-`;
-
-export const ContainerFlexRow = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 50px;
-`;

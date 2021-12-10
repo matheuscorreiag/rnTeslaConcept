@@ -9,6 +9,7 @@ export const Container = styled.View`
 
 export const Car = styled.Image`
   position: absolute;
+
   width: 700px;
   right: -350px;
   top: -120px;

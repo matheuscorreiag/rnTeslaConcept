@@ -8,38 +8,36 @@ import Status from "./containers/Status";
 import GestureRecognizer from "react-native-swipe-gestures";
 
 const Routes = () => {
-  //const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator();
 
   return (
-    // <NavigationContainer>
-    //   <Tab.Navigator
-    //     screenOptions={{
-    //       tabBarStyle: { backgroundColor: "#353a40", height: 65 },
-    //     }}
-    //     initialRouteName="Home"
-    //   >
-    //     <Tab.Screen
-    //       name="Home"
-    //       component={Home}
-    //       options={{
-    //         headerShown: false,
-    //         tabBarIcon: () => <Icon name="home" size={24} color="#7159c1" />,
-    //       }}
-    //     />
-    //     <Tab.Screen
-    //       name="Status"
-    //       component={Status}
-    //       options={{
-    //         tabBarIcon: () => (
-    //           <Icon name="activity" size={24} color="#7159c1" />
-    //         ),
-    //       }}
-    //     />
-    //   </Tab.Navigator>
-    // </NavigationContainer>
-    <View>
-      <Text>Hello</Text>
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: { backgroundColor: "#353a40", height: 65 },
+          headerShown: false,
+        }}
+        initialRouteName="Home"
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="home" size={24} color="#7159c1" />,
+          }}
+        />
+        <Tab.Screen
+          name="Status"
+          component={Status}
+          options={{
+            tabBarIcon: () => (
+              <Icon name="activity" size={24} color="#7159c1" />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
 

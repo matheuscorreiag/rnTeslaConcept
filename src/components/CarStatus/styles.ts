@@ -3,37 +3,36 @@ import styled from "styled-components/native";
 export const Container = styled.View`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
 `;
 
 export const Title = styled.Text`
   font-size: 20px;
+  font-weight: bold;
   color: #fff;
   padding-bottom: 20px;
 `;
 export const StatsContainer = styled.View`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 `;
 export const Label = styled.Text`
-  font-size: 14px;
+  font-size: 15px;
   color: #7f8489;
 `;
 export const Value = styled.Text`
-  font-size: 18px;
+  font-size: 15px;
   color: #fff;
+  font-weight: bold;
 `;
 export const IconLabelContainer = styled.View`
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 `;
-export const IconLabelValueContainer = styled.View`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const IconContainer = styled.View`
   justify-content: center;
-  padding-right: 20px;
+  padding-right: 5px;
+`;
+export const LabelValueContainer = styled.View`
+  flex-direction: column;
 `;

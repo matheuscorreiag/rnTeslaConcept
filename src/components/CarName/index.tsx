@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { Text } from 'react-native';
+import { Text } from "react-native";
 
-import { Container } from './styles';
+import { Container, MarkName, ModelName } from "./styles";
 
 const CarName = () => {
   return (
     <Container>
-      <Text>CarName</Text>
+      <MarkName>Tesla</MarkName>
+      <ModelName>Cybertruck</ModelName>
     </Container>
   );
 };

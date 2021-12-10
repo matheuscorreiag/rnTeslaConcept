@@ -20,11 +20,6 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
-    return (
-      <View>
-        <StatusBar />
-        <Status />
-      </View>
-    );
+    return <Routes />;
   }
 }
