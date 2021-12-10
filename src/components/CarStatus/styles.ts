@@ -32,6 +32,7 @@ export const IconLabelContainer = styled.View`
 export const IconContainer = styled.View`
   justify-content: center;
   padding-right: 5px;
+  padding-top: 5px;
 `;
 export const LabelValueContainer = styled.View`
   flex-direction: column;

@@ -19,7 +19,7 @@ const CarStatus = () => {
       <StatsContainer>
         <IconLabelContainer>
           <IconContainer>
-            <Icon name="battery" size={18} color="#fff" />
+            <Icon name="battery" size={14} color="#fff" />
           </IconContainer>
           <LabelValueContainer>
             <Label>Battery</Label>
@@ -28,7 +28,7 @@ const CarStatus = () => {
         </IconLabelContainer>
         <IconLabelContainer>
           <IconContainer>
-            <Icon name="navigation" size={18} color="#fff" />
+            <Icon name="navigation" size={14} color="#fff" />
           </IconContainer>
           <LabelValueContainer>
             <Label>Range</Label>
@@ -37,7 +37,7 @@ const CarStatus = () => {
         </IconLabelContainer>
         <IconLabelContainer>
           <IconContainer>
-            <Icon name="thermometer" size={18} color="#fff" />
+            <Icon name="thermometer" size={14} color="#fff" />
           </IconContainer>
           <LabelValueContainer>
             <Label>Temperature</Label>

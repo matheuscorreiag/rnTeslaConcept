@@ -14,7 +14,7 @@ export const BorderContainer = styled.View`
 
 export const Scroll = styled.ScrollView`
   flex-grow: 1;
-  width: ${width * 0.9};
+  width: ${width * 0.85};
 `;
 
 export const ContainerFlexRow = styled.View`
