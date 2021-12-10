@@ -4,19 +4,28 @@ import { useNavigation } from "@react-navigation/native";
 
 import { Text } from "react-native";
 
-import { Container } from "./styles";
+import { Container, Scroll } from "./styles";
+import Frontcar from "../../components/Frontcar";
+import CarStatus from "../../components/CarStatus";
+import StaticButtons from "../../components/StaticButtons";
 
 const Status = () => {
-  const navigation = useNavigation();
+  //const navigation = useNavigation();
   return (
     <GestureRecognizer
-      onSwipeRight={() => {
-        navigation.navigate("Home");
-      }}
+    // onSwipeRight={() => {
+    //   navigation.navigate("Home");
+    // }}
     >
-      <Container>
-        <Text>Status</Text>
-      </Container>
+      <Scroll>
+        <Container>
+          <StaticButtons type="stats" />
+          <Text> Tesla Cybertruck</Text>
+          <StaticButtons type="user" />
+          <Frontcar />
+          <CarStatus />
+        </Container>
+      </Scroll>
     </GestureRecognizer>
   );
 };

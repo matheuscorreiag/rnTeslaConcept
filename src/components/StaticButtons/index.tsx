@@ -7,7 +7,6 @@ import { Button } from "./styles";
 
 interface Props {
   type: string;
-  screenName: string;
 }
 
 const StaticButtons: React.FC<Props> = ({ type }) => {

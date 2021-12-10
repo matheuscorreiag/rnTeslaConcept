@@ -13,12 +13,12 @@ import { ButtonContainer, Container, Scroll, TitleContainer } from "./styles";
 import GestureRecognizer from "react-native-swipe-gestures";
 
 const Home = () => {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   return (
     <GestureRecognizer
-      onSwipeLeft={() => {
-        navigation.navigate("Status");
-      }}
+    // onSwipeLeft={() => {
+    //   navigation.navigate("Status");
+    // }}
     >
       <Container>
         <Scroll>

@@ -9,6 +9,7 @@ import {
   Roboto_300Light,
 } from "@expo-google-fonts/roboto";
 import Routes from "./src/routes";
+import Status from "./src/containers/Status";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -19,6 +20,11 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
-    return <Routes />;
+    return (
+      <View>
+        <StatusBar />
+        <Status />
+      </View>
+    );
   }
 }
