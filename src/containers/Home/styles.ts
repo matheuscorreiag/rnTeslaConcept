@@ -3,13 +3,12 @@ import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 export const Scroll = styled.ScrollView`
-  width: ${width * 0.9};
+  width: ${width};
 
   flex-grow: 1;
 `;
 export const Container = styled.View`
-  width: ${width};
-  height: ${height};
+  background-color: #353a40;
 `;
 export const ButtonContainer = styled.View`
   display: flex;

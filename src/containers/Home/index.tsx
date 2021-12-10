@@ -21,7 +21,7 @@ const Home = () => {
         navigation.navigate("Status");
       }}
     >
-      <BorderContainer>
+      <Container>
         <Scroll>
           <ButtonContainer>
             <StaticButtons type="settings" />
@@ -43,7 +43,7 @@ const Home = () => {
             <OpenCarTitle />
           </TitleContainer>
         </Scroll>
-      </BorderContainer>
+      </Container>
     </GestureRecognizer>
   );
 };

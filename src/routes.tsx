@@ -14,7 +14,7 @@ const Routes = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          tabBarStyle: { backgroundColor: "#353a40", height: 65 },
+          tabBarStyle: { backgroundColor: "#353a40", height: 0 },
           headerShown: false,
         }}
         initialRouteName="Home"

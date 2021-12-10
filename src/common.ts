@@ -9,5 +9,4 @@ export const BorderContainer = styled.View`
   background-color: #353a40;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
 `;
