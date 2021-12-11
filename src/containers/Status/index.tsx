@@ -9,6 +9,7 @@ import Frontcar from "../../components/Frontcar";
 import CarStatus from "../../components/CarStatus";
 import StaticButtons from "../../components/StaticButtons";
 import CarName from "../../components/CarName";
+import Information from "../../components/Information";
 
 const Status = () => {
   const navigation = useNavigation();
@@ -27,6 +28,7 @@ const Status = () => {
           </ContainerFlexRow>
           <Frontcar />
           <CarStatus />
+          <Information />
         </Scroll>
       </BorderContainer>
     </GestureRecognizer>

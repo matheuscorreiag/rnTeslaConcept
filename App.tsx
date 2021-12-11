@@ -24,6 +24,11 @@ export default function App() {
   } else {
     return (
       <SafeAreaView style={global.droidSafeArea}>
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor={"#353a40"}
+        />
         <Routes />
       </SafeAreaView>
     );
