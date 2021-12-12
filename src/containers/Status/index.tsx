@@ -10,21 +10,19 @@ import CarStatus from "../../components/CarStatus";
 import StaticButtons from "../../components/StaticButtons";
 import CarName from "../../components/CarName";
 import Information from "../../components/Information";
-import ACModal from "../../components/ACModal";
+import ACClosedModal from "../../components/ACClosedModal";
 
 const Status = () => {
   const navigation = useNavigation();
-  const [open, setOpen] = useState(false);
 
   return (
     <GestureRecognizer
       onSwipeRight={() => {
         navigation.navigate("Home");
       }}
-      onSwipeUp={() => setOpen(true)}
     >
       <BorderContainer>
-        <Scroll>
+        <Scroll showsVerticalScrollIndicator={false}>
           <ContainerFlexRow>
             <StaticButtons type="stats" />
             <CarName />
@@ -33,9 +31,9 @@ const Status = () => {
           <Frontcar />
           <CarStatus />
           <Information />
-          <ACModal visible={open} onClose={() => setOpen(false)} />
         </Scroll>
       </BorderContainer>
+      <ACClosedModal />
     </GestureRecognizer>
   );
 };

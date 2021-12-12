@@ -28,9 +28,8 @@ const LiveButtons: React.FC<Props> = ({ type, size }) => {
         )}
         {type === "wind" && <Icon name="wind" size={16} color={iconActive} />}
 
-        {pressed ? (
-          <Icon name="lock" size={24} color={iconActive} />
-        ) : (
+        {type === "lock" && <Icon name="lock" size={24} color={iconActive} />}
+        {type === "unlock" && pressed && (
           <Icon name="unlock" size={24} color={iconActive} />
         )}
       </Button>

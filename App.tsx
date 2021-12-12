@@ -10,7 +10,7 @@ import {
 } from "@expo-google-fonts/roboto";
 import Routes from "./src/routes";
 import Status from "./src/containers/Status";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import global from "./src/global";
 
 export default function App() {
@@ -23,14 +23,16 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <SafeAreaView style={global.droidSafeArea}>
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor={"#353a40"}
-        />
-        <Routes />
-      </SafeAreaView>
+      <SafeAreaProvider>
+        <SafeAreaView style={global.droidSafeArea}>
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor={"#353a40"}
+          />
+          <Routes />
+        </SafeAreaView>
+      </SafeAreaProvider>
     );
   }
 }

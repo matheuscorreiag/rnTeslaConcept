@@ -9,12 +9,13 @@ export const BorderContainer = styled.View`
   background-color: #353a40;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px 0px 120px 0;
 `;
 
 export const Scroll = styled.ScrollView`
-  flex-grow: 1;
   width: ${width * 0.85};
+  height: ${height * 0.5};
+  color: red;
 `;
 
 export const ContainerFlexRow = styled.View`
